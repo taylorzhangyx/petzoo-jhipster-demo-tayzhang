@@ -1,0 +1,40 @@
+{
+  "annotations": {
+    "changelogDate": "20240331144002"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "label",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength"],
+      "fieldValidateRulesMinlength": "3"
+    },
+    {
+      "fieldName": "desc",
+      "fieldType": "String",
+      "fieldValidateRules": ["minlength"],
+      "fieldValidateRulesMinlength": "5"
+    },
+    {
+      "fieldName": "fakeNumber",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "someFaker",
+      "fieldType": "String"
+    }
+  ],
+  "incrementalChangelog": true,
+  "name": "Label",
+  "relationships": [
+    {
+      "otherEntityName": "ticket",
+      "otherEntityRelationshipName": "label",
+      "relationshipName": "ticket",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "searchEngine": "no"
+}

@@ -1,0 +1,28 @@
+{
+  "annotations": {
+    "changelogDate": "20240331144001"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "incrementalChangelog": true,
+  "name": "Project",
+  "relationships": [
+    {
+      "otherEntityName": "team",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "owner",
+      "relationshipSide": "right",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "searchEngine": "no"
+}

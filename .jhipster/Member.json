@@ -1,0 +1,16 @@
+{
+  "annotations": {
+    "changelogDate": "20240331144004"
+  },
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "nickName",
+      "fieldType": "String"
+    }
+  ],
+  "incrementalChangelog": true,
+  "name": "Member",
+  "relationships": [],
+  "searchEngine": "no"
+}

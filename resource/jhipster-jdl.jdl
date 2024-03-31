@@ -1,0 +1,36 @@
+
+entity Project {
+    name String
+    description String
+}
+entity Label{
+    label String minlength(3)
+    desc String minlength(5)
+    fakeNumber Integer
+    someFaker String
+}
+entity Team {
+    name String
+    description String
+}
+entity Member{
+    nickName String
+}
+entity Ticket {
+    title String required
+    description String
+    dueDate LocalDate
+    done Boolean
+    newEntity String
+    someInfo String
+}
+relationship ManyToMany {
+    Ticket{label(label)} to Label{ticket}
+}
+relationship ManyToOne {
+    Ticket{project(name)} to Project , Ticket{assignedTo(login)} to User{ticket} with builtInEntity
+}
+relationship OneToMany{
+    Team{product(name)} to Project{owner}
+}
+paginate Ticket with pagination

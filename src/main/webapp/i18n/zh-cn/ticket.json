@@ -1,0 +1,32 @@
+{
+  "bugTrackerJhipsterApp": {
+    "ticket": {
+      "home": {
+        "title": "Tickets",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "创建新 Ticket",
+        "createOrEditLabel": "创建或编辑 Ticket",
+        "notFound": "No Tickets found"
+      },
+      "created": "Ticket { param } 创建成功",
+      "updated": "Ticket { param } 更新成功",
+      "deleted": "Ticket { param } 删除成功",
+      "delete": {
+        "question": "你确定要删除 Ticket { id } 吗？"
+      },
+      "detail": {
+        "title": "Ticket"
+      },
+      "id": "ID",
+      "title": "Title",
+      "description": "Description",
+      "dueDate": "Due Date",
+      "done": "Done",
+      "newEntity": "New Entity",
+      "someInfo": "Some Info",
+      "project": "Project",
+      "assignedTo": "Assigned To",
+      "label": "Label"
+    }
+  }
+}
