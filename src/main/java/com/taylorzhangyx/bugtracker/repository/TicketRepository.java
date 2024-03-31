@@ -43,4 +43,6 @@ public interface TicketRepository extends TicketRepositoryWithBagRelationships, 
 
     @Query("select ticket from Ticket ticket left join fetch ticket.project left join fetch ticket.assignedTo where ticket.id =:id")
     Optional<Ticket> findOneWithToOneRelationships(@Param("id") Long id);
+
+    Page<Ticket> findAllByOrderByDueDateAsc(Pageable pageable);
 }
