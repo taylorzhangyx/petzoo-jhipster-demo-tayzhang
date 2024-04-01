@@ -4,6 +4,7 @@ import static com.taylorzhangyx.bugtracker.domain.TicketAsserts.*;
 import static com.taylorzhangyx.bugtracker.web.rest.TestUtil.createUpdateProxyForBean;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.hamcrest.Matchers.hasItem;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -435,6 +436,7 @@ class TicketResourceIT {
 
     @Test
     @Transactional
+    @WithMockUser(roles = { "USER", "ADMIN" }) // User with USER and ADMIN role
     void deleteTicket() throws Exception {
         // Initialize the database
         ticketRepository.saveAndFlush(ticket);
