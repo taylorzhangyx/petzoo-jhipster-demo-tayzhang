@@ -292,10 +292,15 @@ paths:
             type: string
       requestBody:
         content:
-          application/octet-stream:
+          multipart/form-data:
             schema:
-              type: string
-              format: binary
+              type: object
+              required:
+                - 'file'
+              properties:
+                file:
+                  type: string
+                  format: binary
       responses:
         '200':
           description: successful operation
