@@ -1,4 +1,4 @@
-package com.taylorzhangyx.bugtracker.web.rest;
+package com.taylorzhangyx.bugtracker.web.openapi;
 
 import com.taylorzhangyx.bugtracker.service.api.dto.Pet;
 import com.taylorzhangyx.bugtracker.web.api.PetApiDelegate;
@@ -30,7 +30,7 @@ public class PetApiDelegateImpl implements PetApiDelegate {
         return ResponseEntity.ok(
             Arrays.stream(Pet.StatusEnum.values())
                 .filter(statusEnum -> statusEnum.name().equalsIgnoreCase(status))
-                .map(statusEnum -> new Pet().id(ThreadLocalRandom.current().nextLong()).status(statusEnum))
+                .map(statusEnum -> new Pet().id(ThreadLocalRandom.current().nextLong(1000000)).status(statusEnum))
                 .collect(Collectors.toList())
         );
     }
